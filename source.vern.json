@@ -1,0 +1,156 @@
+{
+  "name": "Vern",
+  "scopeName": "source.vern",
+  "fileTypes": ["vern"],
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#datatypes"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#chars"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#operators"
+    },
+    {
+      "include": "#special_symbols"
+    }
+  ],
+  "repository": {
+
+    "comments": {
+      "comment": "Single line comment",
+      "name": "comment.line.double-slash.vern",
+      "match": "//.*$"
+    },
+
+    "keywords": {
+      "comment": "Vern keywords",
+      "name": "keyword.control.vern",
+      "match": "\\b(while|func|class|struct|return|parody|for|in|import|if|else|try|catch|foreach)\\b"
+    },
+
+    "datatypes": {
+      "comment": "Vern data types",
+      "name": "storage.type.vern",
+      "match": "\\b(null|int|float|string|short|long|char|frac|byte)\\b"
+    },
+
+    "strings": {
+      "comment": "Double quoted string",
+      "name": "string.quoted.double.vern",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.vern",
+          "match": "\\\\."
+        }
+      ]
+    },
+
+    "chars": {
+      "comment": "Single quoted char",
+      "name": "string.quoted.single.vern",
+      "begin": "'",
+      "end": "'",
+      "patterns": [
+        {
+          "name": "constant.character.escape.vern",
+          "match": "\\\\."
+        }
+      ]
+    },
+
+    "numbers": {
+      "comment": "Numbers - int and float",
+      "patterns": [
+        {
+          "name": "constant.numeric.float.vern",
+          "match": "\\b[0-9]+\\.[0-9]+\\b"
+        },
+        {
+          "name": "constant.numeric.integer.vern",
+          "match": "\\b[0-9]+\\b"
+        }
+      ]
+    },
+
+    "operators": {
+      "comment": "Vern operators",
+      "patterns": [
+        {
+          "name": "keyword.operator.comparison.vern",
+          "match": "(>=|<=|==|>|<)"
+        },
+        {
+          "name": "keyword.operator.assignment.vern",
+          "match": "="
+        },
+        {
+          "name": "keyword.operator.arithmetic.vern",
+          "match": "(\\+|-|\\*|/)"
+        },
+        {
+          "name": "keyword.operator.logical.vern",
+          "match": "([|&!])"
+        },
+        {
+          "name": "keyword.operator.ternary.vern",
+          "match": "\\?"
+        }
+      ]
+    },
+
+    "special_symbols": {
+      "comment": "Vern special symbols",
+      "patterns": [
+        {
+          "name": "punctuation.terminator.vern",
+          "match": ";"
+        },
+        {
+          "name": "punctuation.section.block.begin.vern",
+          "match": "\\{"
+        },
+        {
+          "name": "punctuation.section.block.end.vern",
+          "match": "\\}"
+        },
+        {
+          "name": "punctuation.section.brackets.begin.vern",
+          "match": "\\["
+        },
+        {
+          "name": "punctuation.section.brackets.end.vern",
+          "match": "\\]"
+        },
+        {
+          "name": "punctuation.section.parens.begin.vern",
+          "match": "\\("
+        },
+        {
+          "name": "punctuation.section.parens.end.vern",
+          "match": "\\)"
+        },
+        {
+          "name": "punctuation.other.tilde.vern",
+          "match": "~"
+        }
+      ]
+    }
+
+  }
+}
